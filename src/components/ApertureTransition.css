@@ -1,0 +1,49 @@
+.aperture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none; /* Allows interacting with the page during transition */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.aperture-blade {
+  background-color: #111111; /* Adjust background color here */
+  transition: transform var(--transition-duration) cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Initial state: Closed meeting in the center */
+.blade-top-left {
+  transform: translate(0, 0);
+  background-color: blueviolet;
+}
+.blade-top-right {
+  transform: translate(0, 0);
+  background-color: cyan;
+}
+.blade-bottom-left {
+  transform: translate(0, 0);
+  background-color: cyan;
+}
+.blade-bottom-right {
+  transform: translate(0, 0);
+  background-color: blueviolet;
+}
+
+/* Active State: Bladed push away outward like a camera lens */
+.aperture-overlay.open .blade-top-left {
+  transform: translate(-100%, -100%);
+}
+.aperture-overlay.open .blade-top-right {
+  transform: translate(100%, -100%);
+}
+.aperture-overlay.open .blade-bottom-left {
+  transform: translate(-100%, 100%);
+}
+.aperture-overlay.open .blade-bottom-right {
+  transform: translate(100%, 100%);
+}
