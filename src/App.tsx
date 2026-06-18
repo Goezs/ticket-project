@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <ApertureTransition key={location.pathname} duration={900} />
-      <section id="center">
+      <section id="up_center" className="section_all">
         <div className="">
           <img src={reactLogo} className="" alt="React logo" />
           <img src={viteLogo} className="" alt="Vite logo" />
