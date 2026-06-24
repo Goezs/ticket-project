@@ -5,6 +5,7 @@ import viteLogo  from '../public/favicon.svg'
 import reactLogo from './assets/react.svg'
 import { useState } from 'react'
 import { Footer } from './components/Footer'
+import Nav from './components/Nav'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <ApertureTransition key={location.pathname} duration={900} />
+      <Nav></Nav>
       <div id="app_container" className="app-container">
         <section id="up_center" className="section_all">
             <div className="">
