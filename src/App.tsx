@@ -36,8 +36,8 @@ function App() {
             Count is {count}
           </button>
         </section>
-        <Footer companyName="ticketus"></Footer>
       </div>
+      <Footer companyName="ticketus"></Footer>
     </>
   )
 }
