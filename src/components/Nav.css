@@ -1,4 +1,4 @@
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,12 +7,12 @@ nav {
   background-color: #111827;
 }
 
-nav h2 {
+.navtitle {
   color: white;
   margin: 0;
 }
 
-nav ul {
+.navGeneralList {
   display: flex;
   list-style: none;
   gap: 25px;
@@ -20,11 +20,11 @@ nav ul {
   padding: 0;
 }
 
-nav li {
+.navItem {
   color: white;
   cursor: pointer;
 }
 
-nav li:hover {
+.navItem:hover {
   color: #60a5fa;
 }

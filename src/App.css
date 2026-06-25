@@ -1,9 +1,10 @@
 .section_all{
-    background-color: black;
+    background-color: #010020;
 }
 
 #root, .app-container{
-    min-height: 100vh;
+    min-height: 85vh;
+    background-color: black;
     display:flex;
     flex-direction: column;
 }
