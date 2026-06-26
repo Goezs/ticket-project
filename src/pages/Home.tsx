@@ -2,7 +2,7 @@ import "./Home.css";
 
 function Home(){
     return(
-        <main className="home">
+      <main className="home">
 
       <section className="hero">
 

@@ -18,6 +18,7 @@ export default function Nav (){
             <Link className="navItem" to="/log" >Log in</Link>
           </ul>
         </nav>
+
         <Routes>
           <Route path = "/" element={<Home />} />
           <Route path = "/about" element={<About />} />
