@@ -7,9 +7,34 @@
   background-color: #111827;
 }
 
-.navtitle {
-  color: white;
-  margin: 0;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.img-wrapper {
+  width: 150px; /* Makes image smaller */
+  height: 150px;
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: spin 12s linear infinite;
+}
+
+.img-wrapper:hover {
+  animation-play-state: paused;
+}
+
+.img-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: covers; /* ensures image fills the wrapper  without distortion */
+
 }
 
 .navGeneralList {
