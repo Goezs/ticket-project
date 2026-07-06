@@ -4,13 +4,13 @@ export class UserProfile {
     private _email: string;
     private _residence: string;
     private _telephone: string;
-    private _register_date: string;
+    private _register_date: Date;
     private _certified_user: boolean;
-    private _mean_punctiation: Float32Array;
+    private _mean_punctiation: number;
 
     constructor(id: string, name: string, email: string,
-        residence: string, telephone: string, register_date: string,
-        certified_user: boolean, mean_punctiation: Float32Array){
+        residence: string, telephone: string, register_date: Date,
+        certified_user: boolean, mean_punctiation: number){
         this.id = id;
         this._name = name;
         this._email = email;
