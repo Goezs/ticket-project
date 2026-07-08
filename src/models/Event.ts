@@ -2,7 +2,7 @@ export class Event {
     private id: string;
     private _name: string;
     private _description: string;
-    private _selling_date: string;
+    private _selling_date: Date;
     private _start_hour: string;
     private _place: string;
     private _maximum_person_capacity: number;
@@ -13,7 +13,7 @@ export class Event {
         id: string,
         name: string,
         description: string,
-        selling_date: string,
+        selling_date: Date,
         start_hour: string,
         place: string,
         maximum_person_capacity: number,
