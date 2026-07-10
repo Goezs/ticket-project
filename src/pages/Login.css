@@ -1,0 +1,18 @@
+.padding{
+    padding: 20px;
+
+}
+
+.tableStyle{
+    width: 100%;
+    border-radius: 20px;
+    border-collapse: collapse;
+}
+
+.row{
+
+    background-color: #f2f3;
+    text-align: left    ;
+
+
+}

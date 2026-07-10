@@ -1,5 +1,5 @@
 export class UserProfile {
-    private id: string;
+    private _id: number;
     private _name: string;
     private _email: string;
     private _residence: string;
@@ -8,10 +8,10 @@ export class UserProfile {
     private _certified_user: boolean;
     private _mean_punctiation: number;
 
-    constructor(id: string, name: string, email: string,
+    constructor(id: number, name: string, email: string,
         residence: string, telephone: string, register_date: Date,
         certified_user: boolean, mean_punctiation: number){
-        this.id = id;
+        this._id = id;
         this._name = name;
         this._email = email;
         this._residence = residence;
@@ -87,6 +87,6 @@ export class UserProfile {
 
     // Read-only
     get userId(){
-        return this.id;
+        return this._id;
     }
 }
