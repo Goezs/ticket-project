@@ -21,7 +21,7 @@ const Login: React.FC = () => {
             <section>
                 <div className="padding"></div>
                 <h2>System Users</h2>
-                <table className="tableStyle">
+                <table className="tableStyle" cellPadding={10}>
                     <thead>
                         <tr className="row">
                             <th>ID</th>
