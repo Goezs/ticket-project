@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Home from '../pages/Home';
-import About from '../pages/About';
 import Login from '../pages/Login';
+import About from '../pages/About';
+
+
 import logoImg from '../../public/ticket_logo.png'
 
 import './Nav.css';
