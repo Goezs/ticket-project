@@ -9,8 +9,12 @@ function App() {
   return (
     <>
       <ApertureTransition key={location.pathname} duration={900} />
-      <Nav></Nav>
-      <Footer companyName="ticketus"></Footer>
+      <div className="flex flex-col min-h-screen ">
+        <div className="flex-grow p-6">
+          <Nav/>
+        </div>
+        <Footer companyName="ticketus" />
+      </div>
     </>
   )
 }
