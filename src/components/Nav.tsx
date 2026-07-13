@@ -15,9 +15,6 @@ export default function Nav (){
           <ul className="navGeneralList">
             <Link className="navItem" to="/about" >About us</Link>
             <Link className="navItem" to="/events" >Events</Link>
-            <Link className="navItem" to="/sell" >Sell tickets</Link>
-            <Link className="navItem" to="/publications" >Publications</Link>
-            <Link className="navItem" to="/support" >Support</Link>
             <Link className="navItem" to="/log" >Log in</Link>
           </ul>
         </nav>
