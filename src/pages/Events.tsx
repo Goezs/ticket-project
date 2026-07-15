@@ -1,23 +1,83 @@
+import React, { useState } from 'react';
+import { type CarouselItem } from '../types/carousel';
 
-function Home(){
-    return(
-      <main className="border-b border-yellow-400 sticky top-0 z-50 ">
-        <section className="bg-blue-500">
-
-          <h1>TicketHub</h1>
-
-          <h2>Compra y vende boletas de forma segura</h2>
-
-          <p>
-            Encuentra entradas para conciertos, festivales,
-            eventos deportivos y mucho más.
-          </p>
-
-          <button>Explorar Eventos</button>
-
-        </section>
-      </main>
-    );
+interface CarouselProps {
+    items: CarouselItem[];
 }
 
-export default Home;
+const Carousel: React.FC<CarouselProps> = ({ items }) => {
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+
+    const handlePrev = (): void => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? items.length - 1 : prevIndex - 1
+        );
+    };
+
+    const handleNext = (): void => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === items.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const goToSlide = (slideIndex: number): void => {
+        setCurrentIndex(slideIndex);
+    };
+
+    if (!items.length) return null;
+
+    return (
+        <main className="relative w-full max-w-4x1 mx-auto h-[400px] overflow-hidden group rounded-x1">
+            {/* Slides Container */}
+            <div
+                className="flex w-full h-full transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {items.map((item) => (
+                    <div key ={item.id} className="w-full h-full flex-shrink-0 relative">
+                        <img
+                            src={item.imageUrl}
+                            alt={item.title}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-4">
+                            <h3 className="text-x1 font-bold">{item.title}</h3>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            {/* Left Navigation Arrow */}
+            <button
+                onClick={handlePrev}
+                className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition"
+                aria-label="Previous slide"
+            >
+                &#10094;
+            </button>
+            {/* Left Navigation Arrow */}
+            <button
+                onClick={handleNext}
+                className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition"
+                aria-label="Next slide"
+            >
+                &#10095;
+            </button>
+            {/* Left Navigation Arrow */}
+            <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex space-x-2">
+                {items.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={`w-3 h-3 rounded-full transition-all ${
+                            currentIndex === index ? 'bg-white scale-125' : 'bg-white/'
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
+                ))}
+            </div>
+        </main>
+    )
+
+}
+export default Carousel; 
