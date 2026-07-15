@@ -18,7 +18,7 @@ const Login: React.FC = () => {
 
     return (
         <main>
-            <section>
+            <section className="bg-slate-500">
                 <div className="padding"></div>
                 <h2>System Users</h2>
                 <table className="tableStyle" cellPadding={10}>
