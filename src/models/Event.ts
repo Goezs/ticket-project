@@ -1,5 +1,17 @@
+export interface EventJSON {
+    id: number,
+    name: string,
+    description: string,
+    selling_date: Date,
+    start_hour: string,
+    place: string,
+    maximum_person_capacity: number,
+    category: string,
+    author: string
+}
+
 export class Event {
-    private id: string;
+    private id: number;
     private _name: string;
     private _description: string;
     private _selling_date: Date;
@@ -9,26 +21,17 @@ export class Event {
     private _category: string;
     private _author: string;
 
-    constructor(
-        id: string,
-        name: string,
-        description: string,
-        selling_date: Date,
-        start_hour: string,
-        place: string,
-        maximum_person_capacity: number,
-        category: string,
-        author: string
+    constructor(data: EventJSON
     ){
-        this.id = id;
-        this._name = name;
-        this._description = description;
-        this._selling_date = selling_date;
-        this._start_hour = start_hour;
-        this._place = place;
-        this._maximum_person_capacity = maximum_person_capacity;
-        this._category = category;
-        this._author = author;
+        this.id = data.id;
+        this._name = data.name;
+        this._description = data.description;
+        this._selling_date = data.selling_date;
+        this._start_hour = data.start_hour;
+        this._place = data.place;
+        this._maximum_person_capacity = data.maximum_person_capacity;
+        this._category = data.category;
+        this._author = data.author;
     }
     //getter
     //name

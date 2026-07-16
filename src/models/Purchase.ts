@@ -1,10 +1,10 @@
 export class Purchase {
-    private id: string;
+    private id: number;
     private id_ticket: string;
     private _expiration_date: Date;
     private _price: number;
 
-    constructor(id: string, id_ticket: string, expiration_date: Date,
+    constructor(id: number, id_ticket: string, expiration_date: Date,
         price: number
      ){
         this.id = id;

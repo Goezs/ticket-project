@@ -12,7 +12,7 @@
 //}
 export class Ticket {
 
-    private id: string;
+    private id: number;
     private _event_id: string;
     private _price: number;
     private _ticket_status: string;
@@ -22,7 +22,7 @@ export class Ticket {
     private _state: string;
     //constructor
     constructor(
-        id: string,
+        id: number,
         event_id: string,
         price: number,
         ticket_status: string,
