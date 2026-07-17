@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { type CarouselItem } from '../types/carousel';
 import { Event, type EventJSON } from '../models/Event';
 
 interface CarouselProps {
     items: CarouselItem[];
 }
-
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
+
+    const [events, setEvents] = useState<EventJSON[]>([]);
+
+    useEffect(() => {
+        // files in the public folder are served relative to the root URL
+
+        fetch("/events.json")
+            .then((res) => res.json())
+            .then((data: any[]) => {
+                const mapped = data.map((item) => ({
+                    ...item,
+                    selling_date: new Date(item.selling_date), // Convert to JS Date Object
+                    start_hour: new Date(item.start_hour)
+                }));
+                setEvents(mapped);
+            })
+            .catch((err) => console.error("Error loading JSON: ", err));
+    }, []);
+
     
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 

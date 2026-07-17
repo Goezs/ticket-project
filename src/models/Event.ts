@@ -3,7 +3,7 @@ export interface EventJSON {
     name: string,
     description: string,
     selling_date: Date,
-    start_hour: string,
+    start_hour: Date,
     place: string,
     maximum_person_capacity: number,
     category: string,
@@ -15,7 +15,7 @@ export class Event {
     private _name: string;
     private _description: string;
     private _selling_date: Date;
-    private _start_hour: string;
+    private _start_hour: Date;
     private _place: string;
     private _maximum_person_capacity: number;
     private _category: string;
@@ -85,11 +85,14 @@ export class Event {
         }
         this._description = newDescription;
     }
+
+    // Selling date
+    public set selling_date(newSellingDate: Date){
+        this._selling_date = newSellingDate;
+    }
+
     // Start Hour
-    public set start_hour(newStartHour: string){
-        if (newStartHour.trim() === ""){
-            throw new Error("Start hour cannot be empty");
-        }
+    public set start_hour(newStartHour: Date){
         this._start_hour = newStartHour;
     }
     // Place
