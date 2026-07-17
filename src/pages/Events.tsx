@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { type CarouselItem } from '../types/carousel';
+import { Event, type EventJSON } from '../models/Event';
 
 interface CarouselProps {
     items: CarouselItem[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
+    
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
 
