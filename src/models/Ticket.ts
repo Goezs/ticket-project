@@ -12,7 +12,7 @@
 //}
 export class Ticket {
 
-    private id: number;
+    private _id: number;
     private _event_id: string;
     private _price: number;
     private _ticket_status: string;
@@ -31,7 +31,7 @@ export class Ticket {
         column: string,
         state: string,//TicketState
     ){
-        this.id = id;
+        this._id = id;
         this._event_id = event_id;
         this._price = price;
         this._ticket_status = ticket_status;
@@ -41,6 +41,10 @@ export class Ticket {
         this._state = state;
     }
     //GETTERS
+    //ID
+    public get id(){
+        return this._id;
+    }
     // Event ID
     public get event_id(){
         return this._event_id;

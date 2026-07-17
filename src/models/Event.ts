@@ -11,7 +11,7 @@ export interface EventJSON {
 }
 
 export class Event {
-    private id: number;
+    private _id: number;
     private _name: string;
     private _description: string;
     private _selling_date: Date;
@@ -23,7 +23,7 @@ export class Event {
 
     constructor(data: EventJSON
     ){
-        this.id = data.id;
+        this._id = data.id;
         this._name = data.name;
         this._description = data.description;
         this._selling_date = data.selling_date;
@@ -34,6 +34,10 @@ export class Event {
         this._author = data.author;
     }
     //getter
+    public get id(){
+        return this._id;
+    }
+    
     //name
     public get name(){
         return this._name;

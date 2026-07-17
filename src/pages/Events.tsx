@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { type CarouselItem } from '../types/carousel';
 import { Event, type EventJSON } from '../models/Event';
 
-interface CarouselProps {
-    items: CarouselItem[];
-}
-const Carousel: React.FC<CarouselProps> = ({ items }) => {
+const Carousel: React.FC = () => {
 
-    const [events, setEvents] = useState<EventJSON[]>([]);
+    const [events, setEvents] = useState<Event[]>([]);
 
     useEffect(() => {
         // files in the public folder are served relative to the root URL
@@ -31,13 +27,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
     const handlePrev = (): void => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? items.length - 1 : prevIndex - 1
+            prevIndex === 0 ? events.length - 1 : prevIndex - 1
         );
     };
 
     const handleNext = (): void => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === items.length - 1 ? 0 : prevIndex + 1
+            prevIndex === events.length - 1 ? 0 : prevIndex + 1
         );
     };
 
@@ -45,7 +41,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
         setCurrentIndex(slideIndex);
     };
 
-    if (!items.length) return null;
+    if (!events.length) return null;
 
     return (
         <main className="relative w-full max-w-4x1 mx-auto h-[400px] overflow-hidden group rounded-x1">
@@ -54,15 +50,15 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                 className="flex w-full h-full transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-                {items.map((item) => (
+                {events.map((item) => (
                     <div key ={item.id} className="w-full h-full flex-shrink-0 relative">
-                        <img
+                        {/* <img 
                             src={item.imageUrl}
-                            alt={item.title}
+                            alt={item.name}
                             className="w-full h-full object-cover"
-                        />
+                        /> */}
                         <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-4">
-                            <h3 className="text-x1 font-bold">{item.title}</h3>
+                            <h3 className="text-x1 font-bold">{item.name}</h3>
                         </div>
                     </div>
                 ))}
@@ -85,7 +81,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
             </button>
             {/* Left Navigation Arrow */}
             <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex space-x-2">
-                {items.map((_, index) => (
+                {events.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}

@@ -20,6 +20,12 @@ export class UserProfile {
         this._certified_user = certified_user;
         this._mean_punctiation = mean_punctiation;
     }
+    // GETTERS and SETTERS
+
+    //id
+    public get id(){
+        return this._id;
+    }
 
     //name
     public get name(){

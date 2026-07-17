@@ -52,7 +52,7 @@ export default function Nav (){
         <Routes>
           <Route path = "/" element={<Home />} />
           <Route path = "/about" element={<About />} />
-          { /*<Route path = "/events" element={<Events items = {}/>} /> */ }
+          <Route path = "/events" element={<Events/>} />
           <Route path = "/log" element={<Login />} />
         </Routes>
       </Router>
