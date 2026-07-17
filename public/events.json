@@ -49,15 +49,13 @@
 
     {
         "id": 5,
-        "name": "Hurron Mashion",
-        "description": "The Hurron Mashion is a movie event for people to make felling of music, and different in all flavors",
-        "selling_date": "12-12-2026",
-        "start_hour": "22-1-2027T22:00:00Z",
-        "place": "Bogota",
+        "name": "Golf enticipity",
+        "description": "The Golf enticipity is a conference event for people earest to get a better idea of the machine learning alghoritm and its unique development in real situations",
+        "selling_date": "2026-12-11",
+        "start_hour": "2027-22-1T22:00:00Z",
+        "place": "Lima",
         "maximum_person_capacity": 2050,
         "category": "Movie",
         "author": "Fench Tork"
     }
-
-
 ]
