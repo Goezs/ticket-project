@@ -1,18 +1,175 @@
-.padding{
-    padding: 20px;
+.login{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000;
+}
+
+.login-container{
+
+    width: 420px;
+
+    padding: 40px;
+
+    background-color: #111;
+
+    border-radius: 16px;
+
+    border: 1px solid #2a2a2a;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
 
 }
 
-.tableStyle{
-    width: 100%;
-    border-radius: 20px;
-    border-collapse: collapse;
+.login-container h1{
+
+    font-size: 2.4rem;
+
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+.login-container p{
+
+    color: #bdbdbd;
+
+    text-align: center;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
 }
 
-.row{
+/* ----------Formulario---------- */
 
-    background-color: #f2f3;
-    text-align: left;
+.login-form{
 
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
 
 }
+
+/* ----------cada campo---------- */
+
+.input-group{
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+/* ----------Etiquetas ---------- */
+.input-group label{
+
+    color: white;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+/* ----------Inputs---------- */
+
+.input-group input{
+
+    padding: 14px;
+
+    border: 2px solid #333;
+
+    border-radius: 10px;
+
+    background-color: #1d1d1d;
+
+    color: white;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: border-color .3s ease;
+}
+
+/* ----------cuando el usuario escribe---------- */
+
+.input-group input:focus{
+
+    border-color: #7c3aed;
+
+}
+
+/* ----------placeholder---------- */
+
+.input-group input::placeholder{
+
+    color: #888;
+
+}
+/* ----------Botón---------- */
+.login-form button{
+
+    margin-top: 10px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #7c3aed;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: border-color .3s ease;
+}
+
+/* ----------Hover---------- */
+
+.login-form button:hover{
+
+    background-color: #6d28d9;
+
+}
+
+.register-link{
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #bdbdbd;
+
+    font-size: .95rem;
+}
+
+.register-link a{
+
+    color: #7c3aed;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color .3s ease;
+}
+
+.register-link a:hover{
+
+    color: #9d5cff;
+}
+

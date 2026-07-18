@@ -1,53 +1,59 @@
 import "./Login.css";
-import React from 'react';
-import { UserProfile } from "../models/UserProfile";
 
-const Login: React.FC = () => {
-    // 1. Create instance class
-    const userList: UserProfile[] = [
-        new UserProfile(1, "andres", "andres@gmail.com", "Chinese Street", 
-            "233042455", new Date(), false, 0
-        ),
-        new UserProfile(2, "Eyler", "Eyler3@gmail.com", "England", 
-            "523304245", new Date(), false, 0
-        ),
-        new UserProfile(1, "Bejjunton", "bejjunton@gmail.com", "London", 
-            "642330455", new Date(), true, 40
-        ),
-    ];
+function Login ()  {
+   
 
     return (
-        <main>
-            <section className="bg-slate-500">
-                <div className="padding"></div>
-                <h2>System Users</h2>
-                <table className="tableStyle" cellPadding={10}>
-                    <thead>
-                        <tr className="row">
-                            <th>ID</th>
-                            <th>Email</th>
-                            <th>Residence</th>
-                            <th>telephone</th>
-                            <th>Date_creation</th>
-                            <th>Verified user</th>
-                            <th>Mean punctiation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { /* 2. Map through the instanced objects */}
-                        {userList.map((user) => (
-                            <tr key = {user.userId}>
-                                <td>{user.email}</td>
-                                <td>{user.residence}</td>
-                                <td>{user.telephone}</td>
-                                <td>{user.register_date.toString()}</td>
-                                <td>{user.certified_user}</td>
-                                <td>{user.mean_punctuation}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+        <main className="login">
+
+            <section className="login-container">
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Sign in to buy and sell tickets securely on TicketHub.
+                </p>
+
+                {/*formulario*/}
+
+                <form className="login-form">
+
+                    <div className="input-group">
+                        <label htmlFor="email">Email</label>
+
+                        <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        />
+
+                    </div>
+
+                    <div className="input-group">
+                        <label htmlFor="password">Password</label>
+
+                        <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your Password"
+                        />
+
+                    </div>
+                    <button type="submit">
+                        Sign In
+                    </button>
+
+                </form>
+
+                {/*Pie*/}
+
+                <p className="register-link">
+                    Don,t have an account?
+                    <a href="#"> Create one</a>
+                </p>
+
             </section>
+
         </main>
 
     );
