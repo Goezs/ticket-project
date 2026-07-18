@@ -45,7 +45,7 @@ function Login ()  {
 
                 </form>
 
-                {/*Pie*/}
+                {/*Pie: Mauro esto es para seguir trabajando para hacer funcinal el link por eso lo puse aquí */}
 
                 <p className="register-link">
                     Don,t have an account?
