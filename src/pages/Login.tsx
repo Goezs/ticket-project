@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react";
 import "./Login.css";
 
+
+
 function Login ()  {
-   
+    
 
     return (
         <main className="login">
@@ -16,7 +19,7 @@ function Login ()  {
 
                 {/*formulario*/}
 
-                <form className="login-form">
+                <form className="login-form" >
 
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
@@ -25,6 +28,7 @@ function Login ()  {
                         type="email"
                         id="email"
                         placeholder="Enter your email"
+                        //para probar el login
                         />
 
                     </div>
@@ -36,6 +40,7 @@ function Login ()  {
                         type="password"
                         id="password"
                         placeholder="Enter your Password"
+                        
                         />
 
                     </div>
