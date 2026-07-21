@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Event} from '../models/Event';
 
 const Carousel: React.FC = () => {
@@ -21,8 +21,16 @@ const Carousel: React.FC = () => {
             .catch((err) => console.error("Error loading JSON: ", err));
     }, []);
 
-    
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [isPaused, setIsPaused] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (isPaused) return;
+
+        const interval = setInterval(handleNext, 5000);
+
+        return () => clearInterval(interval);
+    }, [isPaused])
 
     // Function to read images
     const getImageUrl = (name: string) => {
@@ -54,6 +62,8 @@ const Carousel: React.FC = () => {
             <div
                 className="flex w-full h-full transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
             >
                 {events.map((item) => (
                     <div key ={item.id} className="w-full h-full flex-shrink-0 relative">
