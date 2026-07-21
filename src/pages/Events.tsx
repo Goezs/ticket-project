@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Event, type EventJSON } from '../models/Event';
+import { Event} from '../models/Event';
 
 const Carousel: React.FC = () => {
-
+    // Set the events (objects)
     const [events, setEvents] = useState<Event[]>([]);
 
     useEffect(() => {
@@ -24,7 +24,12 @@ const Carousel: React.FC = () => {
     
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
+    // Function to read images
+    const getImageUrl = (name: string) => {
+        return new URL(`../assets/events_photos/${name}`, import.meta.url).href;
+    };
 
+    // Functions for carousel
     const handlePrev = (): void => {
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? events.length - 1 : prevIndex - 1
@@ -44,7 +49,7 @@ const Carousel: React.FC = () => {
     if (!events.length) return null;
 
     return (
-        <main className="relative w-full max-w-4x1 mx-auto h-[400px] overflow-hidden group rounded-x1">
+        <main className="relative w-full max-w-4x1 mx-auto h-[800px] overflow-hidden group rounded-x1 pt-4">
             {/* Slides Container */}
             <div
                 className="flex w-full h-full transition-transform duration-500 ease-out"
@@ -52,11 +57,11 @@ const Carousel: React.FC = () => {
             >
                 {events.map((item) => (
                     <div key ={item.id} className="w-full h-full flex-shrink-0 relative">
-                        {/* <img 
-                            src={item.imageUrl}
+                        <img 
+                            src={getImageUrl(item.imageUrl)}
                             alt={item.name}
-                            className="w-full h-full object-cover"
-                        /> */}
+                            className="w-full h-full object-cover rounded-lg"
+                        />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-4">
                             <h3 className="text-x1 font-bold">{item.name}</h3>
                         </div>
@@ -74,7 +79,7 @@ const Carousel: React.FC = () => {
             {/* Left Navigation Arrow */}
             <button
                 onClick={handleNext}
-                className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition"
+                className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition"
                 aria-label="Next slide"
             >
                 &#10095;

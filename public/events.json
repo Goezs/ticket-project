@@ -9,7 +9,7 @@
         "maximumPersonCapacity": 20000,
         "category": "Musical",
         "author": "Jeysson Mell",
-        "imageUrl": "./assets/events_photos/rollyin_bells.jpg"
+        "imageUrl": "rollyin_bells.jpg"
     },
 
     {
@@ -22,7 +22,7 @@
         "maximumPersonCapacity": 2000,
         "category": "Teather",
         "author": "Merlen Katie",
-        "imageUrl": "./assets/events_photos/meryin_east.jpg"
+        "imageUrl": "meryin_east.jpg"
     },
 
     {
@@ -35,7 +35,7 @@
         "maximumPersonCapacity": 52000,
         "category": "Debate",
         "author": "Eiky Dinchkov",
-        "imageUrl": "./assets/events_photos/larry_sethel.jpg"
+        "imageUrl": "larry_sethel.jpg"
     },
 
     {
@@ -48,7 +48,7 @@
         "maximumPersonCapacity": 2050,
         "category": "Movie",
         "author": "Fench Tork",
-        "imageUrl": "./assets/events_photos/hurron_mashion.jpg"
+        "imageUrl": "hurron_mashion.jpg"
     },
 
     {
@@ -61,6 +61,6 @@
         "maximumPersonCapacity": 2050,
         "category": "Movie",
         "author": "Fench Tork",
-        "imageUrl": "./assets/events_photos/golf_anticipity.jpg"
+        "imageUrl": "golf_anticipity.jpg"
     }
 ]
