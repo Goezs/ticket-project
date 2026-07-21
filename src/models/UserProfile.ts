@@ -4,20 +4,20 @@ export class UserProfile {
     private _email: string;
     private _residence: string;
     private _telephone: string;
-    private _register_date: Date;
-    private _certified_user: boolean;
+    private _registerDate: Date;
+    private _certifiedUser: boolean;
     private _mean_punctiation: number;
 
     constructor(id: number, name: string, email: string,
-        residence: string, telephone: string, register_date: Date,
-        certified_user: boolean, mean_punctiation: number){
+        residence: string, telephone: string, registerDate: Date,
+        certifiedUser: boolean, mean_punctiation: number){
         this._id = id;
         this._name = name;
         this._email = email;
         this._residence = residence;
         this._telephone = telephone;
-        this._register_date = register_date;
-        this._certified_user = certified_user;
+        this._registerDate = registerDate;
+        this._certifiedUser = certifiedUser;
         this._mean_punctiation = mean_punctiation;
     }
     // GETTERS and SETTERS
@@ -72,18 +72,18 @@ export class UserProfile {
         this._telephone = newTelephone;
     }
 
-    //Register_date
-    public get register_date(){
-        return this._register_date;
+    //registerDate
+    public get registerDate(){
+        return this._registerDate;
     }
 
     //Certified User
-    public get certified_user(){
-        return this._certified_user;
+    public get certifiedUser(){
+        return this._certifiedUser;
     }
 
-    public set certified_user(newCertified_user: boolean){
-        this._certified_user = newCertified_user;
+    public set certifiedUser(newCertifiedUser: boolean){
+        this._certifiedUser = newCertifiedUser;
     }
 
     //Mean punctiation

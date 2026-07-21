@@ -3,59 +3,64 @@
         "id": 1,
         "name": "Rollyin bells",
         "description": "The Rollyin bells is a musical event for people to make felling of music, and different in all flavors",
-        "selling_date": "2026-20-09",
-        "start_hour": "2026-20-10T08:00:00Z",
+        "sellingDate": "2026-20-09",
+        "startHour": "2026-20-10T08:00:00Z",
         "place": "Sao Paulo",
-        "maximum_person_capacity": 20000,
+        "maximumPersonCapacity": 20000,
         "category": "Musical",
-        "author": "Jeysson Mell"
+        "author": "Jeysson Mell",
+        "imageUrl": "./assets/events_photos/rollyin_bells.jpg"
     },
 
     {
         "id": 2,
         "name": "Meryin East",
         "description": "The Meryin East is a teather event for people to make felling of music, and different in all flavors",
-        "selling_date": "2026-20-10",
-        "start_hour": "2026-20-11T12:45:00Z",
+        "sellingDate": "2026-20-10",
+        "startHour": "2026-20-11T12:45:00Z",
         "place": "Rio de Janeiro",
-        "maximum_person_capacity": 2000,
+        "maximumPersonCapacity": 2000,
         "category": "Teather",
-        "author": "Merlen Katie"
+        "author": "Merlen Katie",
+        "imageUrl": "./assets/events_photos/meryin_east.jpg"
     },
 
     {
         "id": 3,
         "name": "Larry Sethel",
         "description": "The Larry Sethel is a Debate event for people to make felling of music, and different in all flavors",
-        "selling_date": "2026-02-11",
-        "start_hour": "2026-22-12T5:00:00Z",
+        "sellingDate": "2026-02-11",
+        "startHour": "2026-22-12T5:00:00Z",
         "place": "New Jersey",
-        "maximum_person_capacity": 52000,
+        "maximumPersonCapacity": 52000,
         "category": "Debate",
-        "author": "Eiky Dinchkov"
+        "author": "Eiky Dinchkov",
+        "imageUrl": "./assets/events_photos/larry_sethel.jpg"
     },
 
     {
         "id": 4,
         "name": "Hurron Mashion",
         "description": "The Hurron Mashion is a movie event for people to make felling of music, and different in all flavors",
-        "selling_date": "2026-12-12",
-        "start_hour": "2027-22-1T02:30:00Z",
+        "sellingDate": "2026-12-12",
+        "startHour": "2027-22-1T02:30:00Z",
         "place": "Bogota",
-        "maximum_person_capacity": 2050,
+        "maximumPersonCapacity": 2050,
         "category": "Movie",
-        "author": "Fench Tork"
+        "author": "Fench Tork",
+        "imageUrl": "./assets/events_photos/hurron_mashion.jpg"
     },
 
     {
         "id": 5,
         "name": "Golf enticipity",
         "description": "The Golf enticipity is a conference event for people earest to get a better idea of the machine learning alghoritm and its unique development in real situations",
-        "selling_date": "2026-12-11",
-        "start_hour": "2027-22-1T22:00:00Z",
+        "sellingDate": "2026-12-11",
+        "startHour": "2027-22-1T22:00:00Z",
         "place": "Lima",
-        "maximum_person_capacity": 2050,
+        "maximumPersonCapacity": 2050,
         "category": "Movie",
-        "author": "Fench Tork"
+        "author": "Fench Tork",
+        "imageUrl": "./assets/events_photos/golf_anticipity.jpg"
     }
 ]

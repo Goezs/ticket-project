@@ -2,42 +2,46 @@ export interface EventJSON {
     id: number,
     name: string,
     description: string,
-    selling_date: Date,
-    start_hour: Date,
+    sellingDate: Date,
+    startHour: Date,
     place: string,
-    maximum_person_capacity: number,
+    maximumPersonCapacity: number,
     category: string,
-    author: string
+    author: string,
+    imageUrl: string
 }
 
 export class Event {
     private _id: number;
     private _name: string;
     private _description: string;
-    private _selling_date: Date;
-    private _start_hour: Date;
+    private _sellingDate: Date;
+    private _startHour: Date;
     private _place: string;
-    private _maximum_person_capacity: number;
+    private _maximumPersonCapacity: number;
     private _category: string;
     private _author: string;
+    private _imageUrl: string;
 
     constructor(data: EventJSON
     ){
         this._id = data.id;
         this._name = data.name;
         this._description = data.description;
-        this._selling_date = data.selling_date;
-        this._start_hour = data.start_hour;
+        this._sellingDate = data.sellingDate;
+        this._startHour = data.startHour;
         this._place = data.place;
-        this._maximum_person_capacity = data.maximum_person_capacity;
+        this._maximumPersonCapacity = data.maximumPersonCapacity;
         this._category = data.category;
         this._author = data.author;
+        this._imageUrl = data.imageUrl;
     }
     //getter
+
+    //id
     public get id(){
         return this._id;
     }
-    
     //name
     public get name(){
         return this._name;
@@ -47,20 +51,20 @@ export class Event {
         return this._description;
     }
     // Selling Date
-    public get selling_date(){
-        return this._selling_date;
+    public get sellingDate(){
+        return this._sellingDate;
     }
     // Start Hour
-    public get start_hour(){
-        return this._start_hour;
+    public get startHour(){
+        return this._startHour;
     }
     //Place
     public get place(){
         return this._place;
     }
     // Maximum Person Capacity
-    public get maximum_person_capacity() {
-    return this._maximum_person_capacity;
+    public get maximumPersonCapacity() {
+    return this._maximumPersonCapacity;
     }
     //Category
     public get category(){
@@ -70,10 +74,12 @@ export class Event {
     public get author(){
         return this._author;
     }
-    //Read-only
-    public get eventId(){
-        return this.id;
+   //Author
+    public get imageUrl(){
+        return this._imageUrl;
     }
+ 
+
     //Setter
     // Name
     public set name (newName:string){
@@ -91,13 +97,13 @@ export class Event {
     }
 
     // Selling date
-    public set selling_date(newSellingDate: Date){
-        this._selling_date = newSellingDate;
+    public set sellingDate(newSellingDate: Date){
+        this._sellingDate = newSellingDate;
     }
 
     // Start Hour
-    public set start_hour(newStartHour: Date){
-        this._start_hour = newStartHour;
+    public set startHour(newStartHour: Date){
+        this._startHour = newStartHour;
     }
     // Place
     public set place(newPlace:string){
@@ -107,11 +113,11 @@ export class Event {
         this._place = newPlace;
     }
     // Maximum Person Capacity
-    public set maximum_person_capacity(newCapacity: number){
+    public set maximumPersonCapacity(newCapacity: number){
         if (newCapacity <= 0){
             throw new Error("Capacity must be greater than zero");
         }
-        this._maximum_person_capacity = newCapacity;
+        this._maximumPersonCapacity = newCapacity;
     }
     // Category
     public set category(newCategory: string){
@@ -119,6 +125,13 @@ export class Event {
             throw new Error("Category cannot be empty")
         }
         this._category = newCategory;
+    }
+
+    public set imageUrl(newImageUrl: string){
+        if (newImageUrl.trim() === ""){
+            throw new Error("url cannot be empty")
+        }
+        this._imageUrl = newImageUrl;
     }
 
 

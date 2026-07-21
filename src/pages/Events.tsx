@@ -13,8 +13,8 @@ const Carousel: React.FC = () => {
             .then((data: any[]) => {
                 const mapped = data.map((item) => ({
                     ...item,
-                    selling_date: new Date(item.selling_date), // Convert to JS Date Object
-                    start_hour: new Date(item.start_hour)
+                    sellingDate: new Date(item.sellingDate), // Convert to JS Date Object
+                    startHour: new Date(item.startHour)
                 }));
                 setEvents(mapped);
             })

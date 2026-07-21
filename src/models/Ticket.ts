@@ -13,9 +13,9 @@
 export class Ticket {
 
     private _id: number;
-    private _event_id: string;
+    private _eventId: string;
     private _price: number;
-    private _ticket_status: string;
+    private _ticketStatus: string;
     private _chair: string;
     private _row: string;
     private _column: string;
@@ -23,18 +23,18 @@ export class Ticket {
     //constructor
     constructor(
         id: number,
-        event_id: string,
+        eventId: string,
         price: number,
-        ticket_status: string,
+        ticketStatus: string,
         chair: string,//TicketStatus
         row: string,
         column: string,
         state: string,//TicketState
     ){
         this._id = id;
-        this._event_id = event_id;
+        this._eventId = eventId;
         this._price = price;
-        this._ticket_status = ticket_status;
+        this._ticketStatus = ticketStatus;
         this._chair = chair;
         this._row = row;
         this._column = column;
@@ -46,16 +46,16 @@ export class Ticket {
         return this._id;
     }
     // Event ID
-    public get event_id(){
-        return this._event_id;
+    public get eventId(){
+        return this._eventId;
     }
     // Price
     public get price(){
         return this._price;
     }
     // Ticket Status
-    public get ticket_status(){
-        return this._ticket_status;
+    public get ticketStatus(){
+        return this._ticketStatus;
     }
     //chair
     public get chair(){
@@ -85,7 +85,7 @@ export class Ticket {
         this._price = newPrice;
     }
     // Ticket Status
-    public set ticket_status(newTicketStatus: string ){
+    public set ticketStatus(newTicketStatus: string ){
         if(
             newTicketStatus !== "Normal" &&
             newTicketStatus !== "VIP" &&
@@ -93,7 +93,7 @@ export class Ticket {
         ){
             throw new Error("Invalid ticket status");
         }
-        this._ticket_status = newTicketStatus;
+        this._ticketStatus = newTicketStatus;
         
     }
     // Chair
