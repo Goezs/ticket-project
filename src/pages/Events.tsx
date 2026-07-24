@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { Event} from '../models/Event';
+import { Event } from '../models/Event';
 
 const Carousel: React.FC = () => {
     // Set the events (objects)
