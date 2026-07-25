@@ -1,6 +1,8 @@
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 function Home(){
+  const navigate = useNavigate();
     return(
       <main className="home">
         <section className="hero">
@@ -14,7 +16,9 @@ function Home(){
             eventos deportivos y mucho más.
           </p>
 
-          <button>Explorar Eventos</button>
+          <button onClick={() => navigate ("/events")}>
+            Explorar Eventos
+            </button>
 
         </section>
       </main>
