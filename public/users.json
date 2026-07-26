@@ -1,0 +1,37 @@
+[
+    {
+        "id": 7,
+        "name": "Ivan Andres",
+        "email": "ivan@gmail.com",
+        "password": "123456",
+        "residence": "Medellín",
+        "telephone": "3001234567",
+        "register_date": "2025-07-15",
+        "certified_user": true,
+        "mean_punctuation": 4.8
+
+
+    },
+    {
+        "id": 8,
+        "name": "Mauricio Goez",
+        "email": "mauro@gmail.com",
+        "password": "654321",
+        "residence": "Medellín",
+        "telephone": "3109876543",
+        "register_date": "2025-06-10",
+        "certified_user": true,
+        "mean_punctuation": 4.2
+    },
+    {
+        "id": 9,
+        "name": "Carlos López",
+        "email": "carlos@gmail.com",
+        "password": "abc123",
+        "residence": "Cali",
+        "telephone": "3151234567",
+        "register_date": "2025-05-01",
+        "certified_user": false,
+        "mean_punctuation": 4.0
+    }
+]

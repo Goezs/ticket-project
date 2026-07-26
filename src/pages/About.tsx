@@ -1,4 +1,5 @@
 import { useState } from 'react'
+// import "./About.css";
 
 export default function About() {
   // const location = useLocation();
@@ -6,7 +7,7 @@ export default function About() {
 
 
   return (
-    <div id="app_container" className="app-container">
+    <main id="app_container" className="app-container">
         <section id="up_center" className="section_all">
             <button
                 type="button"
@@ -16,6 +17,6 @@ export default function About() {
                 Count is {count}
             </button>
         </section>
-    </div>
+    </main>
   );
 }

@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Rollyin bells",
+        "description": "The Rollyin bells is a musical event for people to make felling of music, and different in all flavors",
+        "sellingDate": "2026-20-09",
+        "startHour": "2026-20-10T08:00:00Z",
+        "place": "Sao Paulo",
+        "maximumPersonCapacity": 20000,
+        "category": "Musical",
+        "author": "Jeysson Mell",
+        "imageUrl": "rollyin_bells.jpg"
+    },
+
+    {
+        "id": 2,
+        "name": "Meryin East",
+        "description": "The Meryin East is a teather event for people to make felling of music, and different in all flavors",
+        "sellingDate": "2026-20-10",
+        "startHour": "2026-20-11T12:45:00Z",
+        "place": "Rio de Janeiro",
+        "maximumPersonCapacity": 2000,
+        "category": "Teather",
+        "author": "Merlen Katie",
+        "imageUrl": "meryin_east.jpg"
+    },
+
+    {
+        "id": 3,
+        "name": "Larry Sethel",
+        "description": "The Larry Sethel is a Debate event for people to make felling of music, and different in all flavors",
+        "sellingDate": "2026-02-11",
+        "startHour": "2026-22-12T5:00:00Z",
+        "place": "New Jersey",
+        "maximumPersonCapacity": 52000,
+        "category": "Debate",
+        "author": "Eiky Dinchkov",
+        "imageUrl": "larry_sethel.jpg"
+    },
+
+    {
+        "id": 4,
+        "name": "Hurron Mashion",
+        "description": "The Hurron Mashion is a movie event for people to make felling of music, and different in all flavors",
+        "sellingDate": "2026-12-12",
+        "startHour": "2027-22-1T02:30:00Z",
+        "place": "Bogota",
+        "maximumPersonCapacity": 2050,
+        "category": "Movie",
+        "author": "Fench Tork",
+        "imageUrl": "hurron_mashion.jpg"
+    },
+
+    {
+        "id": 5,
+        "name": "Golf enticipity",
+        "description": "The Golf enticipity is a conference event for people earest to get a better idea of the machine learning alghoritm and its unique development in real situations",
+        "sellingDate": "2026-12-11",
+        "startHour": "2027-22-1T22:00:00Z",
+        "place": "Lima",
+        "maximumPersonCapacity": 2050,
+        "category": "Movie",
+        "author": "Fench Tork",
+        "imageUrl": "golf_anticipity.jpg"
+    }
+]

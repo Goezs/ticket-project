@@ -1,30 +1,27 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 
-  padding: 15px 30px;
-  background-color: #111827;
+}
+.nav-bg{
+  background-color: orange;
 }
 
-.navtitle {
-  color: white;
-  margin: 0;
+.img-wrapper {
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: spin 12s linear infinite;
 }
 
-.navGeneralList {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+.img-wrapper:hover {
+  animation-play-state: paused;
 }
 
-.navItem {
-  color: white;
-  cursor: pointer;
-}
-
-.navItem:hover {
-  color: #60a5fa;
+.img-wrapper img{
+  object-fit: covers; /* ensures image fills the wrapper  without distortion */
 }
