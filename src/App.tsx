@@ -25,7 +25,7 @@ function App() {
               <Route path = "/about" element={<About />} />
               <Route path = "/events" element={<Events/>} />
               <Route path = "/log" element={<Login />} />
-              <Route path = "/event/:id" element={<EventDetails />} />
+              <Route path = "/events/:id" element={<EventDetails />} />
             </Routes>
           </div>
           <Footer companyName="ticketus" />
