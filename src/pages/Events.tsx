@@ -73,7 +73,7 @@ const Carousel: React.FC = () => {
               alt={item.name}
               className="w-full h-full object-cover rounded-lg"
             />
-            <Link to={`${item.id}`}>
+            <Link to={`${item.id}`}className="after:absolute after:inset-0">
               <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-4">
                 <h3 className="text-x1 font-bold">{item.name}</h3>
               </div>
