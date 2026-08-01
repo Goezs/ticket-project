@@ -1,0 +1,26 @@
+.tickets-section{
+    margin-top: 50px;
+    color: white;
+}
+
+.tickets-section h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tickets-section p{
+    margin-bottom: 30px;
+}
+
+.ticket-card{
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ticket-card button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

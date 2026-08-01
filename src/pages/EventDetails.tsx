@@ -101,6 +101,34 @@ function EventDetails() {
           </div>
         </div>
       </div>
+      
+      <section className="tickets-section">
+        <h2>Available Tickets</h2>
+        <p>
+          Choose the ticket type you want to purchase
+        </p>
+        {/* General Ticket */}
+        <div className="ticket-card">
+          <h3>General Ticket</h3>
+          <p>Price: --</p>
+          <p>Available: --</p>
+          <button>Buy Ticket</button>
+        </div>
+        {/* VIP Ticket */}
+        <div className="ticket-card">
+          <h3>VIP Ticket</h3>
+          <p>Price: --</p>
+          <p>Available: --</p>
+          <button>Buy Ticket</button>
+        </div>
+        {/* Platinum Ticket */}
+        <div className="ticket-card">
+          <h3>Platinum Ticket</h3>
+          <p>Price: --</p>
+          <p>Available: --</p>
+          <button>Buy Ticket</button>
+        </div>
+      </section>
     </main>
   );
 }
