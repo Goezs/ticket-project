@@ -1,0 +1,100 @@
+[
+    {
+        "1": 1,
+        "eventId":1,
+        "type": "General",
+        "price":80,
+        "available":150
+    },
+    {
+        "id":2,
+        "evenId":1,
+        "type":"VIP",
+        "price":150,
+        "available":40
+    },
+    {
+        "id": 3,
+        "eventId": 1,
+        "type": "Platinum",
+        "price": 250,
+        "available": 15
+    },
+    {
+        "id": 4,
+        "eventId": 2,
+        "type": "General",
+        "price": 70,
+        "available": 180
+    },
+    {
+        "id": 5,
+        "eventId": 2,
+        "type": "VIP",
+        "price": 140,
+        "available": 50
+    },
+    {
+        "id": 6,
+        "eventId": 2,
+        "type": "Platinum",
+        "price": 220,
+        "available": 20
+    },
+    {
+        "id": 7,
+        "eventId": 3,
+        "type": "General",
+        "price": 60,
+        "available": 400
+    },
+    {
+        "id": 8,
+        "eventId": 3,
+        "type": "VIP",
+        "price": 120,
+        "available": 80
+    },
+    {
+        "id": 9,
+        "eventId": 4,
+        "type": "General",
+        "price": 50,
+        "available": 300
+    },
+    {
+        "id": 11,
+        "eventId": 4,
+        "type": "VIP",
+        "price": 100,
+        "available": 60
+    },
+    {
+        "id": 12,
+        "eventId": 4,
+        "type": "Platinum",
+        "price": 160,
+        "available": 25
+    },
+    {
+        "id": 13,
+        "eventId": 5,
+        "type": "General",
+        "price": 90,
+        "available": 250
+    },
+    {
+        "id": 14,
+        "eventId": 5,
+        "type": "VIP",
+        "price": 180,
+        "available": 70
+    },
+    {
+        "id": 15,
+        "eventId": 5,
+        "type": "Platinum",
+        "price": 280,
+        "available": 35
+    } 
+]

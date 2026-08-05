@@ -14,10 +14,19 @@ interface SingleEvent {
   author?: string;
   imageUrl?: string;
 }
+interface Ticket {
+  id: number;
+  eventId: number;
+  type: string;
+  price: number;
+  available: number;
+
+}
 
 function EventDetails() {
   const params = useParams();
   const [event, setEvent] = useState<SingleEvent>({});
+  const [tickets, setTickets] = useState<Ticket[]>([]);
 
   console.log(event);
 
@@ -38,6 +47,21 @@ function EventDetails() {
       })
       .catch((err) => console.error("Error loading JSON: ", err));
   }, []);
+
+  useEffect(()=>{
+    fetch("/tickets.json")
+    .then((res) => res.json())
+    .then((data: Ticket[]) =>{
+      setTickets(data);
+    })
+    .catch((err) => console.error("Error loading tickets: ", err));
+  }, []);
+
+  const eventTickets = tickets.filter(
+    (ticket) => ticket.eventId === Number(params.id)
+
+  );
+
 
 
   // Function to read images
@@ -107,27 +131,14 @@ function EventDetails() {
         <p>
           Choose the ticket type you want to purchase
         </p>
-        {/* General Ticket */}
-        <div className="ticket-card">
-          <h3>General Ticket</h3>
-          <p>Price: --</p>
-          <p>Available: --</p>
+        {eventTickets.map((ticket)=>(
+        <div key={ticket.id} className="ticket-card">
+          <h3>{ticket.type} Ticket</h3>
+          <p>Price: ${ticket.price}</p>
+          <p>Available: {ticket.available}</p>
           <button>Buy Ticket</button>
         </div>
-        {/* VIP Ticket */}
-        <div className="ticket-card">
-          <h3>VIP Ticket</h3>
-          <p>Price: --</p>
-          <p>Available: --</p>
-          <button>Buy Ticket</button>
-        </div>
-        {/* Platinum Ticket */}
-        <div className="ticket-card">
-          <h3>Platinum Ticket</h3>
-          <p>Price: --</p>
-          <p>Available: --</p>
-          <button>Buy Ticket</button>
-        </div>
+        ))}
       </section>
     </main>
   );
