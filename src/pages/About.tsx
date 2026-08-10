@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import SentimenAnalyser from '../components/SentimentAnalyser';
+import Llm from '../components/llm';
 // import "./About.css";
 
 export default function About() {
@@ -7,7 +6,7 @@ export default function About() {
   return (
     <main id="app_container" className="app-container">
         <section id="up_center" className="section_all">
-           <SentimenAnalyser></SentimenAnalyser> 
+           <Llm></Llm> 
         </section>
     </main>
   );

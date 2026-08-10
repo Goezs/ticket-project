@@ -19,6 +19,10 @@ self.addEventListener('message', async (event: MessageEvent) => {
         // Stream tokens sequentially back to the React UI conponent
         const streamer = new TextStreamer(generator.tokenizer, {
             skip_prompt: true,
+            callback_function: (outputToken: string) => {
+                // Send each piece of output back to React component immediatly
+                self.postMessage({status: 'update', output: outputToken});
+            },
         });
 
         self.postMessage({ status: 'start' });
