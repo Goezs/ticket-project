@@ -44,7 +44,9 @@ export default function llm() {
   };
 
   return (
-    <div style = {{ padding: '24px', fontFamily: 'sans-serif'}}>
+    <div
+      className="rounded-2xl border border-gray-200 bg-white px-5 pb-5 pt-5 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6"
+      >
       <h1>Client-Side LLM playground</h1>  
       <p>System Status: 
         <strong>{status}
@@ -52,22 +54,26 @@ export default function llm() {
       </p>
 
       <textarea
-       rows= {4}
-       style = {{ width: '100%', marginBottom: '12px', background: '#fff'}}
-       value = {input}
-       onChange= {(e) => setInput(e.target.value)}
-       placeholder = "Type something to promt your local model..."
+        rows= {4}
+        className="absolute top-1/2 left-4 bg-pink"
+        value = {input}
+        onChange= {(e) => setInput(e.target.value)}
+        placeholder = "Type something to promt your local model..."
       />
 
       <button onClick={handleGenerate} 
-        style= {{ padding: '8px 16px', cursor: 'pointer', background: '#fff' }}
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/30 hover:bg-blue/60 text-white p-2 rounded-full transition"
       >
         Run Model
       </button>
 
-      <div style={{ marginTop: '24px', background: '#f5f', padding: '16px', borderRadius: '4px' }}>
+      <div 
+        className="rounded-2xl border border-gray-200 bg-white px-5 pb-5 pt-5 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6 sm:pt-6"
+        >
         <h3>Response:</h3>
-        <p style={{ whiteSpace: 'pre-wrap' }}>{ output || 'No generation yet.' }</p>
+        <p 
+          className="text-white"
+          >{ output || 'No generation yet.' }</p>
       </div>
     </div>
   )
